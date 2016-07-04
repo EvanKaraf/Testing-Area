@@ -5,12 +5,6 @@
 
 typedef post ItemType;
 
-class ListNode{
-public:
-	ItemType currPost;
-	ListNode* next;
-};
-
 class TreeNode {
 public:
 	std::string creator;
