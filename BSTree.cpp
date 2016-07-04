@@ -46,11 +46,15 @@ void btree::printInOrder(TreeNode* root) {
 }
 
 TreeNode* btree::insert(TreeNode* root,ItemType itemToPlace) {
-	if (root == nullptr || root->creator == itemToPlace.getPoster()) {
+	if (root == nullptr) {
+		root = new TreeNode;
 		root->creatorsPost.push_back(itemToPlace);
 		root->creator = itemToPlace.getPoster();
 		root->right = nullptr;
 		root->left = nullptr;
+	}
+	else if(root->creator == itemToPlace.getPoster()){
+		root->creatorsPost.push_back(itemToPlace);
 	}
 	else {
 		if (itemToPlace.getPoster() > root->creator)
