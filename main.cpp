@@ -2,8 +2,8 @@
 #include <vector>
 #include <ctime>
 #include <string>
-#include "c:\Users\Vaggelis\Documents\Visual Studio 2015\Projects\ConsoleApplication4\ConsoleApplication4\myforum.h"
-#include "C:\Users\Vaggelis\Documents\Visual Studio 2015\Projects\ConsoleApplication4\ConsoleApplication4\Header.h"
+#include "myforum.h"
+#include "Header.h"
 
 using namespace std;
 int main() {
@@ -36,6 +36,7 @@ int main() {
 	for (vector<post>::size_type i = 0 ; i<forumPosts.size();i++) {
 		Tree.insert(forumPosts[i]);
 	}
+	cout << "Printint BST inorder..." << endl;
 	Tree.printInOrder();
 
 	string emptyInt;
